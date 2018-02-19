@@ -1,10 +1,10 @@
 [
     {
-        "merged": "D:\\react native\\Ikamn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\src_img_bg.jpg",
-        "source": "D:\\react native\\Ikamn\\android\\app\\src\\main\\res\\drawable-mdpi\\src_img_bg.jpg"
+        "merged": "G:\\Projects\\My\\Ikman\\ikman\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\bg.jpg",
+        "source": "G:\\Projects\\My\\Ikman\\ikman\\android\\app\\src\\main\\res\\drawable-mdpi\\bg.jpg"
     },
     {
-        "merged": "D:\\react native\\Ikamn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\bg.jpg",
-        "source": "D:\\react native\\Ikamn\\android\\app\\src\\main\\res\\drawable-mdpi\\bg.jpg"
+        "merged": "G:\\Projects\\My\\Ikman\\ikman\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\src_img_bg.jpg",
+        "source": "G:\\Projects\\My\\Ikman\\ikman\\android\\app\\src\\main\\res\\drawable-mdpi\\src_img_bg.jpg"
     }
 ]
