@@ -1,63 +1,44 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
   StyleSheet
 } from 'react-native';
-import { Image,ImageBackground } from 'react-native';
+import { Image,ImageBackground,Keyboard } from 'react-native';
 import { Container, Content, View, Button, Left, Right, Icon, Card, CardItem, cardBody } from 'native-base';
 // Our custom files and classes import
-import Text from './component/Text';
-import Navbar from './component/Navbar';
-import SideMenu from './component/SideMenu';
-import SideMenuDrawer from './component/SideMenuDrawer';
-import CategoryBlock from './component/CategoryBlock';
+import { StackNavigator, DrawerNavigator, NavigationActions} from 'react-navigation';
+import Text from './src/component/Text';
+import Navbar from './src/component/Navbar';
+import SideMenu from './src/component/SideMenu';
+import SideMenuDrawer from './src/component/SideMenuDrawer';
+import CategoryBlock from './src/component/CategoryBlock';
+
+import Main from './src/Pages/Main'
+import Login from './src/Pages/Login'
+import BasicFlatList from './src/Pages/BasicFlatList'
 
 
 export default class App extends Component<> {
-  render() {
-    var left = (
-      <Left style={{flex:1}}>
-        <Button onPress={() => this._sideMenuDrawer.open()} transparent>
-          <Icon style={{ color: "#DC2F2F" }} name='ios-menu-outline'/>
-        </Button>
-      </Left>
-    );
-    var right = (
-      <Right style={{flex:1}}>
-        <Button transparent>
-          <Icon name='ios-search-outline' style={{ color: "#DC2F2F" }} />
-        </Button>
-        <Button transparent>
-          <Icon name='ios-cart' style={{ color: "#DC2F2F" }} />
-        </Button>
-      </Right>
-    );
+  static navigationOptions = {
+    header: null,
+    };
 
-    return(
-      
-      <ImageBackground source={require("./src/img/bg.jpg")}
-                  style={styles.backgroundImage}>
-                  <SideMenuDrawer ref={(ref) => this._sideMenuDrawer = ref}>
-          <Container>
-            <Navbar left={left} right={right} title="My Store" />
-            <Image source={require('./bg.jpg')} style={{width: 40, height: 45}}/>
-          </Container>
-          </SideMenuDrawer>
-      </ImageBackground>
-      
-    );
+    constructor(props) {
+      Keyboard.dismiss();
+        super(props)
+          this.state = {
+            initialRoute: 'BasicFlatList'
+          }
+    }
+  render() {
+      const MainNavigator = StackNavigator({
+        Login: { screen: Login },
+        Main: { screen: Main},
+        BasicFlatList: { screen: BasicFlatList} 
+      },
+      {initialRouteName:this.state.initialRoute})
+    return <MainNavigator />      
+
   }
 }
 
-const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
- 
-}
-});

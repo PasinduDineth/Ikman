@@ -1,5 +1,5 @@
 {
-  "name": "Ikamn",
+  "name": "Ikaman",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,9 +7,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "native-base": "^2.3.8",
+    "native-base": "^2.3.9",
     "react": "16.2.0",
     "react-native": "0.53.0",
+    "react-native-material-textfield": "^0.12.0",
     "react-native-router-flux": "^4.0.0-beta.28"
   },
   "devDependencies": {
