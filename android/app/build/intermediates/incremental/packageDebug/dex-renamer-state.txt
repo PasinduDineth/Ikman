@@ -1,4 +1,4 @@
-#Mon Feb 19 22:22:15 IST 2018
-base.0=D\:\\react native\\Ikamn\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+#Wed Feb 21 01:26:55 IST 2018
+base.0=E\:\\Projects\\My\\ikman\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
-file.0=D\:\\react native\\Ikamn\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+file.0=E\:\\Projects\\My\\ikman\\android\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
