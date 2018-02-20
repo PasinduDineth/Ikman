@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   button: {
     width: moderateScale(300, 0.75),
     height: moderateScale(35, 0.5),
-    backgroundColor: '#ef6c00',
+    backgroundColor: '#2a313b',
     borderRadius: 25,
     borderStyle: 'solid',
     color: '#fff',

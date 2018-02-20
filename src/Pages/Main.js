@@ -43,7 +43,7 @@ export default class Main extends Component<> {
             <StatusBar hidden={true} />
         </View>
             <ImageBackground 
-                source={require("../../src/img/bg.png")}
+                source={require("../../src/img/bg7.jpg")}
                 style={styles.backgroundImage}
             >
             <SideMenuDrawer ref={(ref) => this._sideMenuDrawer = ref}>

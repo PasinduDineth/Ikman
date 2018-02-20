@@ -33,7 +33,7 @@ export default class Login extends Component<{}> {
 
   render() {
     return (
-      <ImageBackground source={require('../../src/img/bg.png')} style={styles.container}>
+      <ImageBackground source={require('../../src/img/bg7.jpg')} style={styles.container}>
         <View style={styles.bodyContainer}>
             <Text style={styles.welcome}>Kamu</Text>
             <Text style={styles.instructions}>Online Reataurant</Text>
@@ -90,15 +90,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   welcome: {
-    fontSize:moderateScale(40, 0.5),
+    fontSize:moderateScale(60, 0.5),
     textAlign: 'center',
     color:"white"
   },
   instructions: {
     textAlign: 'center',
     color: 'white',
-    fontSize: moderateScale(25, 0.5),
-    marginBottom:10
+    fontSize: moderateScale(25, 0.5)
   },login_logo_container:{
     alignItems: 'center',
     justifyContent: 'center',
@@ -118,6 +117,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   container_input: {
-    marginTop: scale(10),
+    marginTop: scale(2),
   },
 });
