@@ -1,8 +1,3 @@
-/**
-* This is the SideMenuSecondLevel component used in the submenu
-**/
-
-// React native and others libraries imports
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import { View, Button, ListItem, List, Body, Right, Icon } from 'native-base';
