@@ -4,7 +4,7 @@
 
 // React native and others libraries imports
 import React, { Component } from 'react';
-import { ScrollView, LayoutAnimation, UIManager, Linking, ImageBackground } from 'react-native';
+import { ScrollView, LayoutAnimation, UIManager, Linking } from 'react-native';
 import { View, List, ListItem, Body, Left, Right, Icon, Item, Input, Button, Grid, Col } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
@@ -38,14 +38,15 @@ export default class SideMenu extends Component {
     if(!this.state.subMenu) {
       return(
         <View>
-          <View style={{paddingLeft: 15, paddingRight: 15}}>
+          <View style={{paddingLeft: 15, paddingRight: 15, backgroundColor:'rgba(42, 49, 59, 1)'}}>
             <Item error={this.state.searchError}>
                 <Input
-                  placeholder='Search...'
+                  placeholder='Search'
+                  placeholderTextColor='#FFF'
                   onChangeText={(text) => this.setState({search: text, searchError: false})}
                   onSubmitEditing={() => this.search()}
                 />
-                <Icon active name='ios-search-outline' onPress={() => this.search()} />
+                <Icon active name='ios-search-outline' style={{ color: "#FFF",fontWeight:'900' }} onPress={() => this.search()} />
             </Item>
           </View>
           <View style={{paddingRight: 15}}>
@@ -57,10 +58,10 @@ export default class SideMenu extends Component {
                 onPress={() => Actions.home()}
               >
                 <Body>
-                  <Text>Home</Text>
+                  <Text style={{ color: "#FFF",fontWeight:'100' }}>Home</Text>
                 </Body>
                 <Right>
-                  <Icon name="ios-arrow-forward" />
+                  <Icon name="ios-arrow-forward" style={{ color: "#FFF",fontWeight:'100' }} />
                 </Right>
               </ListItem>
               {this.renderMenuItems()}
@@ -74,13 +75,13 @@ export default class SideMenu extends Component {
           </View>
           <View style={styles.line} />
           <View style={{paddingRight: 15, paddingLeft: 15}}>
-            <Text style={{marginBottom: 7}}>Follow us</Text>
+            <Text style={{marginBottom: 7, color: "#FFF"}}>Follow us</Text>
             <Grid>
-              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18}} name='logo-facebook' onPress={() => Linking.openURL('http://www.facebook.com/').catch(err => console.error('An error occurred', err))} /></Col>
-              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18}} name='logo-instagram' onPress={() => Linking.openURL('http://www.instagram.com/').catch(err => console.error('An error occurred', err))} /></Col>
-              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18}} name='logo-twitter' onPress={() => Linking.openURL('http://www.twitter.com/').catch(err => console.error('An error occurred', err))} /></Col>
-              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18}} name='logo-youtube' onPress={() => Linking.openURL('http://www.youtube.com/').catch(err => console.error('An error occurred', err))} /></Col>
-              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18}} name='logo-snapchat' onPress={() => Linking.openURL('http://www.snapchat.com/').catch(err => console.error('An error occurred', err))} /></Col>
+              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18, color: "#FFF"}} name='logo-facebook' onPress={() => Linking.openURL('http://www.facebook.com/').catch(err => console.error('An error occurred', err))} /></Col>
+              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18, color: "#FFF"}} name='logo-instagram' onPress={() => Linking.openURL('http://www.instagram.com/').catch(err => console.error('An error occurred', err))} /></Col>
+              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18, color: "#FFF"}} name='logo-twitter' onPress={() => Linking.openURL('http://www.twitter.com/').catch(err => console.error('An error occurred', err))} /></Col>
+              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18, color: "#FFF"}} name='logo-youtube' onPress={() => Linking.openURL('http://www.youtube.com/').catch(err => console.error('An error occurred', err))} /></Col>
+              <Col style={{alignItems: 'center'}}><Icon style={{fontSize: 18, color: "#FFF"}} name='logo-snapchat' onPress={() => Linking.openURL('http://www.snapchat.com/').catch(err => console.error('An error occurred', err))} /></Col>
             </Grid>
           </View>
         </View>
@@ -105,10 +106,10 @@ export default class SideMenu extends Component {
           onPress={() => this.itemClicked(item)}
         >
           <Body>
-            <Text>{item.title}</Text>
+            <Text style={{ color: "#FFF",fontWeight:'100' }}>{item.title}</Text>
           </Body>
           <Right>
-            <Icon name="ios-arrow-forward" />
+            <Icon name="ios-arrow-forward" style={{ color: "#FFF",fontWeight:'100' }} />
           </Right>
         </ListItem>
       );
@@ -169,10 +170,10 @@ export default class SideMenu extends Component {
           onPress={Actions[item.key]}
         >
           <Left>
-            <Icon style={{fontSize: 18}} name={item.icon} />
+            <Icon style={{fontSize: 18, color: "#FFF",fontWeight:'100'}} name={item.icon} />
           </Left>
           <Body style={{marginLeft: -15}}>
-            <Text style={{fontSize: 16}}>{item.title}</Text>
+            <Text style={{fontSize: 16, color: "#FFF",fontWeight:'100'}}>{item.title}</Text>
           </Body>
         </ListItem>
       );
@@ -185,7 +186,7 @@ export default class SideMenu extends Component {
 const styles = {
   container: {
     flex: 1,
-    backgroundColor: '#fdfdfd'
+    backgroundColor: 'rgba(42, 49, 59, 0.8)'
   },
   line: {
     width: '100%',

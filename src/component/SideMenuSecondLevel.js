@@ -1,8 +1,3 @@
-/**
-* This is the SideMenuSecondLevel component used in the submenu
-**/
-
-// React native and others libraries imports
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import { View, Button, ListItem, List, Body, Right, Icon } from 'native-base';
@@ -16,9 +11,9 @@ export default class SideMenuSecondLevel extends Component {
     return(
       <View>
         <View style={styles.header}>
-          <Icon name='ios-arrow-back' style={{fontSize: 20, marginTop: 4}} onPress={() => this.props.back()} />
+          <Icon name='ios-arrow-back' style={{fontSize: 20, marginTop: 4, color: "#FFF"}} onPress={() => this.props.back()} />
           <View style={{flex: 1, alignItems: 'center'}}>
-            <Text style={{textAlign: 'center', fontSize: 20}}>{this.props.title}</Text>
+            <Text style={{textAlign: 'center', fontSize: 20, color: "#FFF"}}>{this.props.title}</Text>
           </View>
         </View>
         <View style={{paddingRight: 15}}>
@@ -42,10 +37,10 @@ export default class SideMenuSecondLevel extends Component {
           onPress={() => this.itemClicked(item)}
         >
           <Body>
-            <Text>{item.title}</Text>
+            <Text style={{ color: "#FFF",fontWeight:'100'}}>{item.title}</Text>
           </Body>
           <Right>
-            <Icon name="ios-arrow-forward" />
+            <Icon name="ios-arrow-forward" style={{fontSize: 18, color: "#FFF",fontWeight:'100'}}/>
           </Right>
         </ListItem>
       );
@@ -63,6 +58,7 @@ const styles={
   header: {
     flex: 1,
     flexDirection: 'row',
-    padding: 15
+    padding: 15,
+    backgroundColor:'rgba(42, 49, 59, 1)'
   }
 };
