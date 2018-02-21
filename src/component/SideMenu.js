@@ -33,6 +33,9 @@ export default class SideMenu extends Component {
           </ScrollView>
     );
   }
+  close() {
+    this._drawer.close();
+  }
 
   renderMenu() {
     if(!this.state.subMenu) {
@@ -41,8 +44,9 @@ export default class SideMenu extends Component {
           <View style={{paddingLeft: 15, paddingRight: 15, backgroundColor:'rgba(42, 49, 59, 1)'}}>
             <Item error={this.state.searchError}>
                 <Input
+                  style={{ color: "#fff" }}
                   placeholder='Search'
-                  placeholderTextColor='#FFF'
+                  placeholderTextColor='rgba(255, 255, 255, 0.5)'
                   onChangeText={(text) => this.setState({search: text, searchError: false})}
                   onSubmitEditing={() => this.search()}
                 />
@@ -55,7 +59,8 @@ export default class SideMenu extends Component {
                 icon
                 key={0}
                 button={true}
-                onPress={() => Actions.home()}
+                //onPress={() => Actions.home()}
+                onPress={() => this._drawer.close()}
               >
                 <Body>
                   <Text style={{ color: "#FFF",fontWeight:'100' }}>Home</Text>
@@ -64,16 +69,21 @@ export default class SideMenu extends Component {
                   <Icon name="ios-arrow-forward" style={{ color: "#FFF",fontWeight:'100' }} />
                 </Right>
               </ListItem>
+
               {this.renderMenuItems()}
             </List>
           </View>
+
           <View style={styles.line} />
+
           <View style={{paddingRight: 15}}>
             <List>
               {this.renderSecondaryList()}
             </List>
           </View>
+
           <View style={styles.line} />
+
           <View style={{paddingRight: 15, paddingLeft: 15}}>
             <Text style={{marginBottom: 7, color: "#FFF"}}>Follow us</Text>
             <Grid>
