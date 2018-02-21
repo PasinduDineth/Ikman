@@ -1,9 +1,5 @@
 [
     {
-        "merged": "D:\\react native\\Ikamn\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
-        "source": "D:\\react native\\Ikamn\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-v23\\abc_control_background_material.xml"
-    },
-    {
         "merged": "G:\\Projects\\My\\Ikman\\ikman\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v23\\abc_control_background_material.xml",
         "source": "G:\\Projects\\My\\Ikman\\ikman\\android\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-v23\\abc_control_background_material.xml"
     }
