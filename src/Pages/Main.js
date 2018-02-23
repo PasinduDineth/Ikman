@@ -52,7 +52,7 @@ export default class Main extends Component<> {
                 left={left} 
                 right={right} 
                 style={styles.headerText} 
-                title="My Store" 
+                title="Kamu" 
                 titleStyle={{color:'#FFF'}}
                 />
                 

@@ -1,5 +1,5 @@
 const Colors = {
-  navbarBackgroundColor: 'transparent',
+  navbarBackgroundColor: '#2a313b',
   statusBarColor: '#DC2F2F'
 };
 
